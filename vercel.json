@@ -1,13 +1,29 @@
 {
-  "version": 2,
   "cleanUrls": true,
-  "routes": [
+  "rewrites": [
     {
-      "handle": "filesystem"
+      "source": "/((?!.*\\.).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*).(css|js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
     }
   ]
 }

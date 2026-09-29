@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
-    "build": "node -e \"console.log('Build completed')\""
+    "build": "mkdir -p public/images && cp -r images/* public/images/ 2>/dev/null || true && cp index.html index.css app.js public/ 2>/dev/null || true"
   },
   "dependencies": {
     "express": "^4.21.2"
