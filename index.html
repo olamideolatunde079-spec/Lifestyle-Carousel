@@ -98,7 +98,7 @@
 
                 <div class="hero-visual">
                     <div class="hero-card-preview" role="button" tabindex="0" onclick="openLightbox(0)" aria-label="Spotlight preview: Match Was Good">
-                        <img src="images/Aesthetic Free.jpg" alt="Featured Editorial" class="hero-card-img">
+                        <img src="images/Aesthetic%20Free.jpg" alt="Featured Editorial" class="hero-card-img">
                         <div class="hero-card-scrim">
                             <span class="hero-card-tag">Featured Spotlight</span>
                             <h2 class="hero-card-title">Match Was Good</h2>
@@ -134,10 +134,89 @@
             </div>
         </div>
 
-        <!-- Infinite Looping Track -->
+        <!-- Infinite Looping Track with Pre-rendered HTML fallback -->
         <div class="carousel-wrapper" aria-label="Image Carousel Track">
             <div id="carouselTrack" class="carousel-track">
-                <!-- Dynamically populated via app.js -->
+                <div class="slide-card" data-index="0" role="button" tabindex="0" onclick="openLightbox(0)" aria-label="View Match Was Good">
+                    <img src="images/Aesthetic%20Free.jpg" alt="Match Was Good" class="slide-img" />
+                    <div class="slide-caption">
+                        <div class="slide-caption-tag"><span>Sport Luxe</span><span>London</span></div>
+                        <h3 class="slide-caption-title">Match Was Good</h3>
+                        <p class="slide-caption-desc">Urban casual portrait capturing sport-inspired style.</p>
+                    </div>
+                </div>
+                <div class="slide-card" data-index="1" role="button" tabindex="0" onclick="openLightbox(1)" aria-label="View Chicago Skyline">
+                    <img src="images/chicago.jpg" alt="Chicago Skyline" class="slide-img" />
+                    <div class="slide-caption">
+                        <div class="slide-caption-tag"><span>Urban Architecture</span><span>Chicago</span></div>
+                        <h3 class="slide-caption-title">Chicago Skyline</h3>
+                        <p class="slide-caption-desc">Towering architecture reflecting morning river mist.</p>
+                    </div>
+                </div>
+                <div class="slide-card" data-index="2" role="button" tabindex="0" onclick="openLightbox(2)" aria-label="View Cool Style">
+                    <img src="images/Cool%20style.jpg" alt="Cool Style" class="slide-img" />
+                    <div class="slide-caption">
+                        <div class="slide-caption-tag"><span>Streetwear Luxe</span><span>Paris</span></div>
+                        <h3 class="slide-caption-title">Cool Style</h3>
+                        <p class="slide-caption-desc">Refined silhouette styling with modern tailoring.</p>
+                    </div>
+                </div>
+                <div class="slide-card" data-index="3" role="button" tabindex="0" onclick="openLightbox(3)" aria-label="View Coorg Serenity">
+                    <img src="images/Coorg.jpg" alt="Coorg Serenity" class="slide-img" />
+                    <div class="slide-caption">
+                        <div class="slide-caption-tag"><span>Lush Highlands</span><span>Coorg</span></div>
+                        <h3 class="slide-caption-title">Coorg Serenity</h3>
+                        <p class="slide-caption-desc">Misty mountain hills enveloped in verdant coffee groves.</p>
+                    </div>
+                </div>
+                <div class="slide-card" data-index="4" role="button" tabindex="0" onclick="openLightbox(4)" aria-label="View Night Out">
+                    <img src="images/Cute%20day.jpg" alt="Night Out" class="slide-img" />
+                    <div class="slide-caption">
+                        <div class="slide-caption-tag"><span>City Lights</span><span>Tokyo</span></div>
+                        <h3 class="slide-caption-title">Night Out</h3>
+                        <p class="slide-caption-desc">Evening ambience capturing ambient city glow.</p>
+                    </div>
+                </div>
+                <div class="slide-card" data-index="5" role="button" tabindex="0" onclick="openLightbox(5)" aria-label="View Lungus Mood">
+                    <img src="images/lungus.jpg" alt="Lungus Mood" class="slide-img" />
+                    <div class="slide-caption">
+                        <div class="slide-caption-tag"><span>Character Study</span><span>Berlin</span></div>
+                        <h3 class="slide-caption-title">Lungus Mood</h3>
+                        <p class="slide-caption-desc">Dramatic portrait study with deep contrast and natural grain.</p>
+                    </div>
+                </div>
+                <div class="slide-card" data-index="6" role="button" tabindex="0" onclick="openLightbox(6)" aria-label="View Vibrant Maximalism">
+                    <img src="images/maximalist.jpg" alt="Vibrant Maximalism" class="slide-img" />
+                    <div class="slide-caption">
+                        <div class="slide-caption-tag"><span>Color & Depth</span><span>Lagos</span></div>
+                        <h3 class="slide-caption-title">Vibrant Maximalism</h3>
+                        <p class="slide-caption-desc">Intricate visual compositions celebrating expressive colors.</p>
+                    </div>
+                </div>
+                <div class="slide-card" data-index="7" role="button" tabindex="0" onclick="openLightbox(7)" aria-label="View Seamless Flow">
+                    <img src="images/Seamless%20pic.jpg" alt="Seamless Flow" class="slide-img" />
+                    <div class="slide-caption">
+                        <div class="slide-caption-tag"><span>Visual Rhythm</span><span>Stockholm</span></div>
+                        <h3 class="slide-caption-title">Seamless Flow</h3>
+                        <p class="slide-caption-desc">Minimalist geometry balancing architectural lines.</p>
+                    </div>
+                </div>
+                <div class="slide-card" data-index="8" role="button" tabindex="0" onclick="openLightbox(8)" aria-label="View Dramatic Footwear">
+                    <img src="images/shoes.jpg" alt="Dramatic Footwear" class="slide-img" />
+                    <div class="slide-caption">
+                        <div class="slide-caption-tag"><span>Statement Soles</span><span>New York</span></div>
+                        <h3 class="slide-caption-title">Dramatic Footwear</h3>
+                        <p class="slide-caption-desc">Bold textures and contemporary footwear craftsmanship.</p>
+                    </div>
+                </div>
+                <div class="slide-card" data-index="9" role="button" tabindex="0" onclick="openLightbox(9)" aria-label="View Visual Logs">
+                    <img src="images/visual%20log.jpg" alt="Visual Logs" class="slide-img" />
+                    <div class="slide-caption">
+                        <div class="slide-caption-tag"><span>Curated Journal</span><span>Toronto</span></div>
+                        <h3 class="slide-caption-title">Visual Logs</h3>
+                        <p class="slide-caption-desc">Documentary aesthetic showcasing daily creative expressions.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -172,9 +251,146 @@
                 </div>
             </div>
 
-            <!-- Bento / Responsive Grid -->
+            <!-- Bento / Responsive Grid with Pre-rendered Cards -->
             <div id="galleryGrid" class="gallery-grid">
-                <!-- Dynamically populated via app.js -->
+                <article class="gallery-card featured-card" data-id="0" role="button" tabindex="0" onclick="openLightbox(0)" aria-label="Open Match Was Good">
+                    <div class="gallery-img-wrap">
+                        <img src="images/Aesthetic%20Free.jpg" alt="Match Was Good" class="gallery-img" />
+                        <div class="gallery-overlay-badge" title="Quick View">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-meta"><span>Fashion & Style</span><span aria-hidden="true">·</span><span>2400 × 3000</span></div>
+                        <h3 class="gallery-title">Match Was Good</h3>
+                        <p class="gallery-desc">Urban casual portrait capturing sport-inspired style and effortless aesthetic presence.</p>
+                        <div class="gallery-footer">
+                            <span class="gallery-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                London, UK
+                            </span>
+                            <span class="gallery-action-link">
+                                Inspect
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="gallery-card" data-id="1" role="button" tabindex="0" onclick="openLightbox(1)" aria-label="Open Chicago Skyline">
+                    <div class="gallery-img-wrap">
+                        <img src="images/chicago.jpg" alt="Chicago Skyline" class="gallery-img" />
+                        <div class="gallery-overlay-badge" title="Quick View">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-meta"><span>Travel & Nature</span><span aria-hidden="true">·</span><span>3840 × 2560</span></div>
+                        <h3 class="gallery-title">Chicago Skyline</h3>
+                        <p class="gallery-desc">Towering architecture reflecting morning river mist and metropolitan energy.</p>
+                        <div class="gallery-footer">
+                            <span class="gallery-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Chicago, USA
+                            </span>
+                            <span class="gallery-action-link">
+                                Inspect
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="gallery-card" data-id="2" role="button" tabindex="0" onclick="openLightbox(2)" aria-label="Open Cool Style">
+                    <div class="gallery-img-wrap">
+                        <img src="images/Cool%20style.jpg" alt="Cool Style" class="gallery-img" />
+                        <div class="gallery-overlay-badge" title="Quick View">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-meta"><span>Fashion & Style</span><span aria-hidden="true">·</span><span>2800 × 3500</span></div>
+                        <h3 class="gallery-title">Cool Style</h3>
+                        <p class="gallery-desc">Refined silhouette styling with modern tailoring and street poise.</p>
+                        <div class="gallery-footer">
+                            <span class="gallery-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Paris, France
+                            </span>
+                            <span class="gallery-action-link">
+                                Inspect
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="gallery-card" data-id="3" role="button" tabindex="0" onclick="openLightbox(3)" aria-label="Open Coorg Serenity">
+                    <div class="gallery-img-wrap">
+                        <img src="images/Coorg.jpg" alt="Coorg Serenity" class="gallery-img" />
+                        <div class="gallery-overlay-badge" title="Quick View">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-meta"><span>Travel & Nature</span><span aria-hidden="true">·</span><span>4000 × 2667</span></div>
+                        <h3 class="gallery-title">Coorg Serenity</h3>
+                        <p class="gallery-desc">Misty mountain hills enveloped in verdant coffee groves.</p>
+                        <div class="gallery-footer">
+                            <span class="gallery-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Coorg, India
+                            </span>
+                            <span class="gallery-action-link">
+                                Inspect
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="gallery-card" data-id="4" role="button" tabindex="0" onclick="openLightbox(4)" aria-label="Open Night Out">
+                    <div class="gallery-img-wrap">
+                        <img src="images/Cute%20day.jpg" alt="Night Out" class="gallery-img" />
+                        <div class="gallery-overlay-badge" title="Quick View">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-meta"><span>Urban & Mood</span><span aria-hidden="true">·</span><span>2500 × 3125</span></div>
+                        <h3 class="gallery-title">Night Out</h3>
+                        <p class="gallery-desc">Evening ambience capturing ambient city glow and relaxed moments.</p>
+                        <div class="gallery-footer">
+                            <span class="gallery-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Tokyo, Japan
+                            </span>
+                            <span class="gallery-action-link">
+                                Inspect
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="gallery-card featured-card" data-id="5" role="button" tabindex="0" onclick="openLightbox(5)" aria-label="Open Lungus Mood">
+                    <div class="gallery-img-wrap">
+                        <img src="images/lungus.jpg" alt="Lungus Mood" class="gallery-img" />
+                        <div class="gallery-overlay-badge" title="Quick View">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-meta"><span>Creative Editorial</span><span aria-hidden="true">·</span><span>3000 × 3750</span></div>
+                        <h3 class="gallery-title">Lungus Mood</h3>
+                        <p class="gallery-desc">Dramatic portrait study with deep contrast, subtle film grain, and raw personality.</p>
+                        <div class="gallery-footer">
+                            <span class="gallery-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Berlin, Germany
+                            </span>
+                            <span class="gallery-action-link">
+                                Inspect
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -211,7 +427,7 @@
 
                 <div class="about-visual-collage">
                     <div class="collage-img-wrap">
-                        <img src="images/Cool style.jpg" alt="Fashion Silhouette" class="collage-img" loading="lazy">
+                        <img src="images/Cool%20style.jpg" alt="Fashion Silhouette" class="collage-img" loading="lazy">
                     </div>
                     <div class="collage-img-wrap">
                         <img src="images/Coorg.jpg" alt="Nature Landscape" class="collage-img" loading="lazy">
@@ -268,13 +484,13 @@
 <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Media Lightbox">
     <div class="lightbox-dialog">
         <div class="lightbox-media">
-            <button id="lightboxCloseBtn" class="lightbox-close-btn" aria-label="Close Lightbox">
+            <button id="lightboxCloseBtn" class="lightbox-close-btn" aria-label="Close Lightbox" onclick="closeLightbox()">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
             </button>
             <button id="lightboxPrevBtn" class="lightbox-nav-prev" aria-label="Previous image">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
             </button>
-            <img id="lightboxImg" src="images/Aesthetic Free.jpg" alt="Lightbox Preview" class="lightbox-img" />
+            <img id="lightboxImg" src="images/Aesthetic%20Free.jpg" alt="Lightbox Preview" class="lightbox-img" />
             <button id="lightboxNextBtn" class="lightbox-nav-next" aria-label="Next image">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
             </button>

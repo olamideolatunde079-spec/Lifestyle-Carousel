@@ -71,7 +71,6 @@ body {
     position: relative;
 }
 
-/* No glowing ambient background */
 .bg-ambient {
     display: none !important;
 }
@@ -538,10 +537,7 @@ a {
     animation: marqueeScroll 45s linear infinite;
 }
 
-.carousel-track:hover {
-    animation-play-state: paused;
-}
-
+.carousel-track:hover,
 .carousel-track.paused {
     animation-play-state: paused;
 }

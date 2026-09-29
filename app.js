@@ -12,7 +12,7 @@ const GALLERY_ITEMS = [
         tag: "Sport Luxe",
         desc: "Urban casual portrait capturing sport-inspired style and effortless aesthetic presence.",
         location: "London, UK",
-        src: "images/Aesthetic Free.jpg",
+        src: "images/Aesthetic%20Free.jpg",
         dimensions: "2400 × 3000",
         camera: "Leica SL2 · 50mm f/1.4",
         featured: true
@@ -38,7 +38,7 @@ const GALLERY_ITEMS = [
         tag: "Streetwear Luxe",
         desc: "Refined silhouette styling with modern tailoring and contemporary street poise.",
         location: "Paris, France",
-        src: "images/Cool style.jpg",
+        src: "images/Cool%20style.jpg",
         dimensions: "2800 × 3500",
         camera: "Canon R5 · 85mm f/1.2",
         featured: false
@@ -64,7 +64,7 @@ const GALLERY_ITEMS = [
         tag: "City Lights",
         desc: "Evening ambience capturing ambient city glow, bokeh textures, and relaxed moments.",
         location: "Tokyo, Japan",
-        src: "images/Cute day.jpg",
+        src: "images/Cute%20day.jpg",
         dimensions: "2500 × 3125",
         camera: "Sony A7S III · 35mm f/1.4",
         featured: false
@@ -103,7 +103,7 @@ const GALLERY_ITEMS = [
         tag: "Visual Rhythm",
         desc: "Minimalist geometry balancing clean architectural lines, shadows, and natural illumination.",
         location: "Stockholm, Sweden",
-        src: "images/Seamless pic.jpg",
+        src: "images/Seamless%20pic.jpg",
         dimensions: "2600 × 3250",
         camera: "Leica M11 · 35mm Summilux",
         featured: false
@@ -129,7 +129,7 @@ const GALLERY_ITEMS = [
         tag: "Curated Journal",
         desc: "Documentary aesthetic showcasing daily creative expressions and artistic discovery.",
         location: "Toronto, Canada",
-        src: "images/visual log.jpg",
+        src: "images/visual%20log.jpg",
         dimensions: "3000 × 3750",
         camera: "Fujifilm X-T5 · 23mm f/1.4",
         featured: false
@@ -143,8 +143,7 @@ let currentFilter = 'all';
 let currentLightboxIndex = 0;
 let scrollSpeed = 45; // seconds for full loop
 
-// DOM Elements
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
     initCarousel();
     initGalleryGrid();
     initControls();
@@ -152,7 +151,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileDrawer();
     initContactForm();
     initScrollSpy();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    initApp();
+}
 
 /**
  * Initialize Infinite Carousel Track
@@ -169,7 +174,7 @@ function initCarousel() {
 
     // Attach click handlers to open lightbox
     track.querySelectorAll('.slide-card').forEach((card) => {
-        card.addEventListener('click', (e) => {
+        card.addEventListener('click', () => {
             const index = parseInt(card.dataset.index, 10);
             openLightbox(index);
         });
@@ -195,10 +200,8 @@ function initCarousel() {
     function handleSwipe() {
         const threshold = 50;
         if (touchEndX < touchStartX - threshold) {
-            // Swiped left
             nextSlideStep();
         } else if (touchEndX > touchStartX + threshold) {
-            // Swiped right
             prevSlideStep();
         }
     }
@@ -236,8 +239,12 @@ function initGalleryGrid() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
+            filterBtns.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-selected', 'false');
+            });
             btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
             currentFilter = btn.dataset.filter;
             renderGallery();
         });
@@ -576,3 +583,7 @@ function initScrollSpy() {
         });
     }, { passive: true });
 }
+
+// Expose openLightbox to global window for inline click handlers
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
