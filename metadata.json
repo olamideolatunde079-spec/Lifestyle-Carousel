@@ -1,0 +1,9 @@
+{
+  "name": "Lifestyle Carousel",
+  "description": "Discover a smooth, aesthetic lifestyle carousel landing page showcasing curated photography, vogue, and fashion moments.",
+  "prompt": "Build an aesthetic lifestyle image carousel landing page",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

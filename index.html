@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle Carousel</title>
+    <meta name="description" content="Discover a smooth, aesthetic lifestyle carousel landing page showcasing curated photography, vogue, and fashion moments.">
+    <meta property="og:title" content="Lifestyle Carousel">
+    <meta property="og:description" content="Discover a smooth, aesthetic lifestyle carousel landing page showcasing curated photography, vogue, and fashion moments.">
+    <meta name="theme-color" content="#ECEEF2">
+    <link rel="shortcut icon" href="images/OlaByt.png" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- Top Bar Navigation Contract -->
+<header class="site-header">
+    <div class="nav-container">
+        <!-- Zone 1: Brand Wordmark -->
+        <a href="#" class="brand" aria-label="Lifestyle Carousel Home">
+            <img src="images/OlaByt.png" alt="Lifestyle Carousel Logo" class="brand-logo" width="36" height="36">
+            <span class="brand-title">Lifestyle Carousel</span>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="nav-links" aria-label="Primary Navigation">
+            <a href="#hero" class="nav-link active">Home</a>
+            <a href="#showcase" class="nav-link">Showcase</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Zone 3: Actions -->
+        <div class="nav-actions">
+            <a href="#gallery" class="btn btn-primary btn-sm">Explore Works</a>
+            <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobileDrawer" class="mobile-drawer" aria-label="Mobile Navigation">
+    <nav class="nav-links">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#showcase" class="nav-link">Showcase</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="#gallery" class="btn btn-primary" style="width: 100%; text-align: center;">View Full Gallery</a>
+</div>
+
+<main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>
+                        Discover a smooth, <span class="gradient-text">aesthetic carousel</span> experience
+                    </h1>
+                    <p class="hero-desc">
+                        Browse beautiful vogue, lifestyle, environment, and photography moments with silky smooth infinite motion, fluid transitions, and high-fidelity interaction.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#showcase" class="btn btn-primary">
+                            <span>Experience Showcase</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#gallery" class="btn btn-outline">
+                            <span>Browse All 10 Works</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Curated Series</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">60fps</span>
+                            <span class="stat-label">Fluid Motion</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4K</span>
+                            <span class="stat-label">Ultra Resolution</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-card-preview" role="button" tabindex="0" onclick="openLightbox(0)" aria-label="Spotlight preview: Match Was Good">
+                        <img src="images/Aesthetic Free.jpg" alt="Featured Editorial" class="hero-card-img">
+                        <div class="hero-card-scrim">
+                            <span class="hero-card-tag">Featured Spotlight</span>
+                            <h2 class="hero-card-title">Match Was Good</h2>
+                            <p class="hero-card-meta">London, UK · Leica SL2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infinite Carousel Showcase Section -->
+    <section id="showcase" class="carousel-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header-left">
+                    <span class="section-kicker">Continuous Flow</span>
+                    <h2 class="section-title">Infinite Motion Showcase</h2>
+                    <p class="section-subtitle">Seamless horizontal motion with pause-on-hover, speed modulation, and interactive inspection.</p>
+                </div>
+                <div class="carousel-toolbar">
+                    <button id="togglePlayBtn" class="carousel-control-btn" aria-label="Toggle pause or play">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                        <span>Pause</span>
+                    </button>
+                    <button id="toggleSpeedBtn" class="carousel-control-btn" aria-label="Adjust scroll velocity">
+                        <span>Speed: 1x</span>
+                    </button>
+                    <button id="toggleReverseBtn" class="carousel-control-btn" aria-label="Reverse scroll direction">
+                        <span>Direction: ▶</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Infinite Looping Track -->
+        <div class="carousel-wrapper" aria-label="Image Carousel Track">
+            <div id="carouselTrack" class="carousel-track">
+                <!-- Dynamically populated via app.js -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="carousel-manual-nav">
+                <button id="prevSlideBtn" class="nav-arrow-btn" aria-label="Previous Slide">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <span id="slideCounter" class="carousel-counter">01 / 10</span>
+                <button id="nextSlideBtn" class="nav-arrow-btn" aria-label="Next Slide">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Gallery Grid Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header-left">
+                    <span class="section-kicker">Curated Directory</span>
+                    <h2 class="section-title">The Complete Gallery</h2>
+                    <p class="section-subtitle">Filter through creative disciplines, high-fashion silhouettes, travel scenery, and intimate editorial studies.</p>
+                </div>
+                <div class="filter-bar" role="tablist" aria-label="Gallery Category Filters">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Works (10)</button>
+                    <button class="filter-btn" data-filter="fashion" role="tab" aria-selected="false">Fashion & Style</button>
+                    <button class="filter-btn" data-filter="travel" role="tab" aria-selected="false">Travel & Nature</button>
+                    <button class="filter-btn" data-filter="urban" role="tab" aria-selected="false">Urban & Mood</button>
+                    <button class="filter-btn" data-filter="editorial" role="tab" aria-selected="false">Creative Editorial</button>
+                </div>
+            </div>
+
+            <!-- Bento / Responsive Grid -->
+            <div id="galleryGrid" class="gallery-grid">
+                <!-- Dynamically populated via app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Craft Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-kicker">Visual Craft</span>
+                    <h2 class="section-title">Crafting Motion & Atmosphere</h2>
+                    <p>Every photograph represents an intentional intersection of natural lighting, texture, architectural geometry, and human expression.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon-box">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
+                            <div class="feature-item-content">
+                                <h3>GPU-Accelerated Smooth Rendering</h3>
+                                <p>Hardware-accelerated CSS transforms ensure buttery 60 frames-per-second scrolling across desktop and mobile devices.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-box">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 8 6 4-6 4Z"/></svg>
+                            </div>
+                            <div class="feature-item-content">
+                                <h3>Full-Fidelity Lightbox Inspection</h3>
+                                <p>Zoom in and explore detailed EXIF metadata, lens focal lengths, color balance, and creative notes for each capture.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual-collage">
+                    <div class="collage-img-wrap">
+                        <img src="images/Cool style.jpg" alt="Fashion Silhouette" class="collage-img" loading="lazy">
+                    </div>
+                    <div class="collage-img-wrap">
+                        <img src="images/Coorg.jpg" alt="Nature Landscape" class="collage-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Inquiries Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-info">
+                    <span class="section-kicker">Get In Touch</span>
+                    <h2>Let's Collaborate on Visual Stories</h2>
+                    <p>Available for editorial commissions, visual consulting, licensing, and creative direction across global destinations.</p>
+                    <div class="contact-details-list">
+                        <div class="contact-detail-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span>olamideolatunde079@gmail.com</span>
+                        </div>
+                        <div class="contact-detail-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                            <span>Worldwide Availability</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="userName" class="form-label">Full Name</label>
+                        <input type="text" id="userName" name="name" class="form-input" placeholder="e.g. Maya Lin" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail" class="form-label">Email Address</label>
+                        <input type="email" id="userEmail" name="email" class="form-input" placeholder="e.g. maya@example.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="userMsg" class="form-label">Message / Project Brief</label>
+                        <textarea id="userMsg" name="message" class="form-textarea" placeholder="Tell us about your upcoming project or inquiry..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <span>Send Message</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- High-Resolution Lightbox Modal -->
+<div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Media Lightbox">
+    <div class="lightbox-dialog">
+        <div class="lightbox-media">
+            <button id="lightboxCloseBtn" class="lightbox-close-btn" aria-label="Close Lightbox">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+            <button id="lightboxPrevBtn" class="lightbox-nav-prev" aria-label="Previous image">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <img id="lightboxImg" src="images/Aesthetic Free.jpg" alt="Lightbox Preview" class="lightbox-img" />
+            <button id="lightboxNextBtn" class="lightbox-nav-next" aria-label="Next image">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+        </div>
+        <div class="lightbox-info">
+            <div class="lightbox-info-top">
+                <span id="lightboxTag" class="lightbox-tag">Fashion & Style · Sport Luxe</span>
+                <h3 id="lightboxTitle" class="lightbox-title">Match Was Good</h3>
+                <p id="lightboxDesc" class="lightbox-desc">Urban casual portrait capturing sport-inspired style and effortless aesthetic presence.</p>
+                <div class="lightbox-specs">
+                    <div class="spec-row">
+                        <span class="spec-label">Location</span>
+                        <span id="lightboxLocation" class="spec-val">London, UK</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Camera & Optics</span>
+                        <span id="lightboxCamera" class="spec-val">Leica SL2 · 50mm f/1.4</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Resolution</span>
+                        <span id="lightboxResolution" class="spec-val">2400 × 3000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lightbox-actions">
+                <a href="#contact" onclick="closeLightbox()" class="btn btn-primary btn-sm" style="flex: 1;">Inquire About Work</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Notice -->
+<div id="toastNotice" class="toast-notice" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    <span id="toastMessage">Thank you! Your message has been received.</span>
+</div>
+
+<!-- Site Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-top">
+            <a href="#" class="brand" aria-label="Lifestyle Carousel Home">
+                <img src="images/OlaByt.png" alt="Lifestyle Carousel Logo" class="brand-logo" width="36" height="36">
+                <span class="brand-title">Lifestyle Carousel</span>
+            </a>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <a href="#hero">Home</a>
+                <a href="#showcase">Showcase</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>Lifestyle Carousel, designed by <a href="mailto:olamideolatunde079@gmail.com" class="footer-credits">Olamide Olatunde</a>.</p>
+            <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top of page">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            </button>
+        </div>
+    </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
