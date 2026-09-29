@@ -3,7 +3,6 @@
    ========================================================================== */
 
 :root {
-    /* Backgrounds: Light clean aesthetic matching original gradient */
     --bg-primary: #ECEEF2;
     --bg-gradient: linear-gradient(180deg, #E2E4E9 0%, #EAECEF 40%, #F4F5F8 100%);
     --bg-secondary: #FFFFFF;
@@ -11,33 +10,27 @@
     --bg-card-subtle: #F8FAFC;
     --bg-overlay: rgba(15, 23, 42, 0.65);
     
-    /* Typography: High contrast, dark slate text */
     --text-primary: #0F172A;
     --text-secondary: #475569;
     --text-muted: #64748B;
     
-    /* Accent: Crisp Royal Blue (Clean, No Glow) */
     --accent: #2563EB;
     --accent-hover: #1D4ED8;
     --accent-subtle: rgba(37, 99, 235, 0.08);
     
-    /* Borders & Hairlines */
     --border-subtle: rgba(15, 23, 42, 0.08);
     --border-hover: rgba(15, 23, 42, 0.16);
     --border-accent: rgba(37, 99, 235, 0.3);
     
-    /* Radii */
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;
     --radius-xl: 28px;
     --radius-full: 9999px;
     
-    /* Fonts: Cool Modern Lifestyle Typography */
     --font-sans: 'Urbanist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-heading: 'Outfit', var(--font-sans);
     
-    /* Transitions */
     --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -46,7 +39,6 @@
     --header-height: 74px;
 }
 
-/* Reset & Base Setup */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -84,7 +76,6 @@ body {
     z-index: 1;
 }
 
-/* Typography Utilities */
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     color: var(--text-primary);
@@ -102,7 +93,6 @@ a {
     text-decoration: none;
 }
 
-/* Header & Navigation */
 .site-header {
     position: sticky;
     top: 0;
@@ -128,7 +118,6 @@ a {
     padding: 0 24px;
 }
 
-/* Zone 1: Brand Wordmark */
 .brand {
     display: flex;
     align-items: center;
@@ -160,7 +149,6 @@ a {
     color: var(--text-primary);
 }
 
-/* Zone 2: Navigation Links */
 .nav-links {
     display: flex;
     align-items: center;
@@ -198,7 +186,6 @@ a {
     width: 100%;
 }
 
-/* Zone 3: Actions & Mobile Toggle */
 .nav-actions {
     display: flex;
     align-items: center;
@@ -269,7 +256,6 @@ a {
     background: #F8FAFC;
 }
 
-/* Mobile Drawer */
 .mobile-drawer {
     position: fixed;
     top: var(--header-height);
@@ -305,7 +291,6 @@ a {
     padding: 8px 0;
 }
 
-/* Hero Section */
 .hero {
     padding: 80px 0 60px;
     position: relative;
@@ -375,7 +360,6 @@ a {
     color: var(--text-muted);
 }
 
-/* Hero Showcase Visual Preview */
 .hero-visual {
     position: relative;
 }
@@ -440,7 +424,6 @@ a {
     color: #E2E8F0;
 }
 
-/* Section Common Header */
 .section-header {
     margin-bottom: 40px;
     display: flex;
@@ -475,14 +458,12 @@ a {
     color: var(--text-secondary);
 }
 
-/* Carousel Section */
 .carousel-section {
     padding: 60px 0;
     position: relative;
     overflow: hidden;
 }
 
-/* Carousel Header Controls */
 .carousel-toolbar {
     display: flex;
     align-items: center;
@@ -517,7 +498,6 @@ a {
     color: #FFFFFF;
 }
 
-/* Carousel Infinite Marquee / Track Container */
 .carousel-wrapper {
     position: relative;
     width: 100vw;
@@ -555,7 +535,6 @@ a {
     }
 }
 
-/* Carousel Slide Card */
 .slide-card {
     flex: 0 0 320px;
     position: relative;
@@ -642,7 +621,6 @@ a {
     overflow: hidden;
 }
 
-/* Carousel Step Controls */
 .carousel-manual-nav {
     display: flex;
     justify-content: center;
@@ -681,7 +659,6 @@ a {
     letter-spacing: 0.05em;
 }
 
-/* Gallery Grid Section */
 .gallery-section {
     padding: 80px 0;
     border-top: 1px solid var(--border-subtle);
@@ -723,7 +700,6 @@ a {
     box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
 }
 
-/* Gallery Bento / Responsive Grid */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -867,7 +843,6 @@ a {
     gap: 8px;
 }
 
-/* About Section */
 .about-section {
     padding: 80px 0;
     border-top: 1px solid var(--border-subtle);
@@ -950,7 +925,6 @@ a {
     transform: scale(1.04);
 }
 
-/* Contact & Inquiry Section */
 .contact-section {
     padding: 80px 0;
     border-top: 1px solid var(--border-subtle);
@@ -1039,7 +1013,6 @@ a {
     min-height: 110px;
 }
 
-/* Toast Alert Notification */
 .toast-notice {
     position: fixed;
     bottom: 24px;
@@ -1067,7 +1040,6 @@ a {
     visibility: visible;
 }
 
-/* Fullscreen Lightbox Modal */
 .lightbox-modal {
     position: fixed;
     inset: 0;
@@ -1245,7 +1217,6 @@ a {
     margin-top: 24px;
 }
 
-/* Footer */
 .site-footer {
     background: #FFFFFF;
     border-top: 1px solid var(--border-subtle);
@@ -1313,38 +1284,29 @@ a {
     border-color: var(--accent);
 }
 
-/* ==========================================================================
-   Responsive Breakpoints & Adjustments
-   ========================================================================== */
-
 @media (max-width: 1024px) {
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
     .hero-visual {
         max-width: 480px;
         margin: 0 auto;
     }
-
     .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
     .contact-card {
         grid-template-columns: 1fr;
         padding: 32px;
         gap: 36px;
     }
-
     .lightbox-dialog {
         grid-template-columns: 1fr;
         max-height: 94vh;
         overflow-y: auto;
     }
-
     .lightbox-media {
         min-height: 300px;
     }
@@ -1355,42 +1317,33 @@ a {
     .nav-actions .btn-primary {
         display: none;
     }
-
     .mobile-menu-btn {
         display: flex;
     }
-
     .hero {
         padding: 48px 0 36px;
     }
-
     .hero-stats {
         gap: 20px;
     }
-
     .section-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
     }
-
     .slide-card {
         flex: 0 0 270px;
         height: 380px;
     }
-
     .gallery-grid {
         grid-template-columns: 1fr;
     }
-
     .about-visual-collage {
         grid-template-columns: 1fr 1fr;
     }
-
     .contact-card {
         padding: 24px;
     }
-
     .footer-top,
     .footer-bottom {
         flex-direction: column;
@@ -1402,22 +1355,18 @@ a {
     .container {
         padding: 0 16px;
     }
-
     .hero h1 {
         font-size: 2.2rem;
     }
-
     .hero-stats {
         flex-direction: column;
         align-items: flex-start;
         gap: 14px;
     }
-
     .slide-card {
         flex: 0 0 240px;
         height: 340px;
     }
-
     .contact-card {
         padding: 20px;
     }
