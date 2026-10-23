@@ -191,6 +191,15 @@ function positionCards() {
     var offset = ((i - activeIdx) % totalCards + totalCards) % totalCards;
     card.style.transition = TRANSITION;
 
+    if (compactLayout && offset !== 0) {
+      card.style.transform = 'translateX(110%) scale(0.9)';
+      card.style.opacity   = '0';
+      card.style.zIndex    = '0';
+      card.style.filter    = 'none';
+      card.style.boxShadow = 'none';
+      return;
+    }
+
     if (offset === 0) {
       card.style.transform = 'translateX(0%) scale(1.00)';
       card.style.opacity   = '1';
