@@ -38,6 +38,7 @@
         <nav class="nav-links" aria-label="Primary Navigation">
             <a href="#hero" class="nav-link">Home</a>
             <a href="#showcase" class="nav-link">Showcase</a>
+            <a href="#video" class="nav-link">Video</a>
             <a href="#gallery" class="nav-link">Gallery</a>
             <a href="#about" class="nav-link">About</a>
                     </nav>
@@ -45,7 +46,7 @@
         <!-- Zone 3: Actions -->
         <div class="nav-actions">
             <a href="#gallery" class="btn btn-primary btn-sm">Explore Works</a>
-            <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
         </div>
@@ -57,6 +58,7 @@
     <nav class="nav-links">
         <a href="#hero" class="nav-link">Home</a>
         <a href="#showcase" class="nav-link">Showcase</a>
+        <a href="#video" class="nav-link">Video</a>
         <a href="#gallery" class="nav-link">Gallery</a>
         <a href="#about" class="nav-link">About</a>
             </nav>
@@ -226,6 +228,44 @@
             </div>
         </div>
 
+    </section>
+
+    <!-- Featured Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header-left">
+                    <span class="section-kicker">Watch the Moment</span>
+                    <h2 class="section-title">Lifestyle in Motion</h2>
+                    <p class="section-subtitle">A moving look at the style and atmosphere behind the collection.</p>
+                </div>
+            </div>
+            <div class="video-frame">
+                <video
+                    class="showcase-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                    aria-label="Lifestyle fashion video"
+                >
+                    <source src="https://res.cloudinary.com/lwhdqmjk/video/upload/v1792680284/From_Klickpin.com-_673991900520776174-pin-id-673991900520776174.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <div class="video-audio-controls" aria-label="Video audio controls">
+                    <button id="videoSoundBtn" class="video-mute-btn" type="button" aria-label="Show sound controls" aria-expanded="false" aria-controls="videoAudioPanel">
+                        <svg data-video-icon="muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                        <svg data-video-icon="sound" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                    </button>
+                    <div id="videoAudioPanel" class="video-audio-panel" hidden>
+                        <button id="videoAudioCloseBtn" class="video-audio-close" type="button" aria-label="Close volume controls">&times;</button>
+                        <label class="video-volume-label" for="videoVolume">Volume</label>
+                        <input id="videoVolume" class="video-volume" type="range" min="0" max="1" step="0.05" value="0.7" aria-label="Video volume">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Curated Gallery Grid Section -->

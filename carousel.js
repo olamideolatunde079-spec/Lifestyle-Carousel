@@ -277,8 +277,10 @@ function updateCarouselToggle() {
 updateCarouselToggle();
 if (carouselToggleBtn) {
   carouselToggleBtn.addEventListener('click', function () {
+    var wasPaused = isPaused;
     isPaused = !isPaused;
     updateCarouselToggle();
+    if (wasPaused) carouselGoNext();
     startAuto();
   });
 }
@@ -500,6 +502,67 @@ if (mobileBtn && mobileDrawer) {
       mobileBtn.setAttribute('aria-expanded', 'false');
     });
   });
+}
+
+/* Start silently for browser-compatible autoplay; audio is user-controlled. */
+var showcaseVideo = document.querySelector('.showcase-video');
+var videoSoundBtn = document.getElementById('videoSoundBtn');
+var videoAudioPanel = document.getElementById('videoAudioPanel');
+var videoAudioCloseBtn = document.getElementById('videoAudioCloseBtn');
+var videoVolume = document.getElementById('videoVolume');
+
+function updateVideoAudioControls() {
+  if (!showcaseVideo || !videoSoundBtn) return;
+  var isMuted = showcaseVideo.muted || showcaseVideo.volume === 0;
+  videoSoundBtn.setAttribute('aria-label', isMuted ? 'Unmute video and show volume' : 'Mute video');
+  videoSoundBtn.setAttribute('aria-pressed', isMuted ? 'true' : 'false');
+  var mutedIcon = videoSoundBtn.querySelector('[data-video-icon="muted"]');
+  var soundIcon = videoSoundBtn.querySelector('[data-video-icon="sound"]');
+  if (mutedIcon) mutedIcon.style.display = isMuted ? '' : 'none';
+  if (soundIcon) soundIcon.style.display = isMuted ? 'none' : '';
+}
+
+if (showcaseVideo && videoSoundBtn && videoAudioPanel && videoAudioCloseBtn && videoVolume) {
+  showcaseVideo.muted = true;
+  showcaseVideo.volume = Number(videoVolume.value);
+
+  videoAudioCloseBtn.addEventListener('click', function () {
+    videoAudioPanel.hidden = true;
+    videoSoundBtn.setAttribute('aria-expanded', 'false');
+    videoSoundBtn.focus();
+  });
+
+  videoSoundBtn.addEventListener('click', function () {
+    if (videoAudioPanel.hidden) {
+      videoAudioPanel.hidden = false;
+      videoSoundBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    if (showcaseVideo.muted || showcaseVideo.volume === 0) {
+      if (showcaseVideo.volume === 0) {
+        showcaseVideo.volume = Number(videoVolume.value) || 0.7;
+      }
+      showcaseVideo.muted = false;
+    } else {
+      showcaseVideo.muted = true;
+    }
+    showcaseVideo.play().catch(function (error) {
+      console.error('Unable to play the lifestyle video with sound:', error);
+    });
+    updateVideoAudioControls();
+  });
+
+  videoVolume.addEventListener('input', function () {
+    showcaseVideo.volume = Number(videoVolume.value);
+    showcaseVideo.muted = showcaseVideo.volume === 0;
+    updateVideoAudioControls();
+  });
+
+  showcaseVideo.play().catch(function (error) {
+    console.error('Unable to autoplay the lifestyle video:', error);
+  });
+
+  updateVideoAudioControls();
 }
 
 
