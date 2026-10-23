@@ -182,6 +182,11 @@ var TRANSITION = 'transform 0.55s cubic-bezier(0.45,0,0.55,1), ' +
  *   anything else       → HIDDEN      (invisible, off-screen)
  */
 function positionCards() {
+  var compactLayout = window.matchMedia('(max-width: 480px)').matches;
+  var sideOffset = compactLayout ? 96 : 72;
+  var farOffset = compactLayout ? 175 : 130;
+  var hiddenOffset = compactLayout ? 250 : 190;
+
   carouselCards.forEach(function (card, i) {
     var offset = ((i - activeIdx) % totalCards + totalCards) % totalCards;
     card.style.transition = TRANSITION;
@@ -193,25 +198,25 @@ function positionCards() {
       card.style.filter    = 'brightness(1.0) blur(0px)';
       card.style.boxShadow = '0 28px 64px rgba(0,0,0,0.42),0 4px 14px rgba(0,0,0,0.22)';
     } else if (offset === 1) {
-      card.style.transform = 'translateX(72%) scale(0.82)';
+      card.style.transform = 'translateX(' + sideOffset + '%) scale(0.82)';
       card.style.opacity   = '0.82';
       card.style.zIndex    = '4';
       card.style.filter    = 'brightness(0.68) blur(0px)';
       card.style.boxShadow = '0 14px 36px rgba(0,0,0,0.26)';
     } else if (offset === totalCards - 1) {
-      card.style.transform = 'translateX(-72%) scale(0.82)';
+      card.style.transform = 'translateX(-' + sideOffset + '%) scale(0.82)';
       card.style.opacity   = '0.82';
       card.style.zIndex    = '4';
       card.style.filter    = 'brightness(0.68) blur(0px)';
       card.style.boxShadow = '0 14px 36px rgba(0,0,0,0.26)';
     } else if (offset === 2) {
-      card.style.transform = 'translateX(130%) scale(0.66)';
+      card.style.transform = 'translateX(' + farOffset + '%) scale(0.66)';
       card.style.opacity   = '0.35';
       card.style.zIndex    = '2';
       card.style.filter    = 'brightness(0.52) blur(1px)';
       card.style.boxShadow = 'none';
     } else if (offset === totalCards - 2) {
-      card.style.transform = 'translateX(-130%) scale(0.66)';
+      card.style.transform = 'translateX(-' + farOffset + '%) scale(0.66)';
       card.style.opacity   = '0.35';
       card.style.zIndex    = '2';
       card.style.filter    = 'brightness(0.52) blur(1px)';
@@ -219,8 +224,8 @@ function positionCards() {
     } else {
       var goRight = offset < totalCards / 2;
       card.style.transform = goRight
-        ? 'translateX(190%) scale(0.55)'
-        : 'translateX(-190%) scale(0.55)';
+        ? 'translateX(' + hiddenOffset + '%) scale(0.55)'
+        : 'translateX(-' + hiddenOffset + '%) scale(0.55)';
       card.style.opacity   = '0';
       card.style.zIndex    = '0';
       card.style.filter    = 'brightness(0.4) blur(2px)';
@@ -228,6 +233,8 @@ function positionCards() {
     }
   });
 }
+
+window.addEventListener('resize', positionCards);
 
 function carouselGoNext() {
   activeIdx = (activeIdx + 1) % totalCards;

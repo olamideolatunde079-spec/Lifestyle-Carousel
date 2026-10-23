@@ -763,9 +763,13 @@ a {
 
 /* Mobile */
 @media (max-width: 480px) {
-    .carousel-wrapper { height: 370px; }
+    .carousel-wrapper { height: 340px; }
     .carousel-stage,
-    .slide-card       { width: 210px; height: 305px; }
+    .slide-card {
+        width: min(72vw, 210px);
+        height: auto;
+        aspect-ratio: 210 / 305;
+    }
     .carousel-nav-btn { width: 42px; height: 42px; }
 }
 
@@ -1460,10 +1464,6 @@ a {
         align-items: flex-start;
         gap: 16px;
     }
-    .slide-card {
-        flex: 0 0 270px;
-        height: 380px;
-    }
     .gallery-grid {
         grid-template-columns: 1fr;
     }
@@ -1491,10 +1491,6 @@ a {
         flex-direction: column;
         align-items: flex-start;
         gap: 14px;
-    }
-    .slide-card {
-        flex: 0 0 240px;
-        height: 340px;
     }
     .contact-card {
         padding: 20px;
